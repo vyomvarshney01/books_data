@@ -18,7 +18,7 @@ app.get('/books', async (req, res) => {
       res.status(400).json('No book details found');
     }
     res.status(200).json({ books });
-  } catch (error) {
+  } catch(error) {
     res.status(500).json({ error: error.message });
   }
 });
@@ -33,7 +33,7 @@ app.get('/books/details/:id', async (req, res) => {
     res.status(200).json({
       book,
     });
-  } catch (error) {
+  } catch(error) {
     res.status(500).json({ error: error.message });
   }
 });
